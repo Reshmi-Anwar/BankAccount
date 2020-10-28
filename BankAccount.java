@@ -7,9 +7,6 @@ public class BankAccount {
     this.password = password;
     this.accountID = accountID;
   }
-  public String toString(){
-    return String.valueOf(accountID) + "\t" + String.valueOf(balance);
-  }
   public double getBalance(){
     return balance;
   }
@@ -28,5 +25,19 @@ public class BankAccount {
     else{
       return false;
     }
+  }
+
+  public boolean withdraw(double amount){
+    if ()(amount > 0) && (amount <= balance)){
+      balance = balance - amount;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  public String toString(){
+    return String.valueOf(accountID) + "\t" + String.valueOf(balance);
   }
 }
