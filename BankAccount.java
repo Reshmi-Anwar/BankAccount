@@ -38,6 +38,10 @@ public class BankAccount {
   }
 
   public String toString(){
-    return String.valueOf(accountID) + "\t" + String.valueOf(balance);
+    return "#" + String.valueOf(accountID) + "\t" + "$" + String.valueOf(balance);
+  }
+
+  private boolean authenticate(String password){
+    return this.password.equals(password);
   }
 }
